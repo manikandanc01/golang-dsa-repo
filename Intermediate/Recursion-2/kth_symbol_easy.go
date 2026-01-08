@@ -98,3 +98,5 @@ func solvekthsymbol(A int, B int) int {
 // Brute Force: Tc is O(2^A), because everytime, 2^1+2^2+2^3+.....+2^A times the loop runs, Total A times
 // ignoring smaller exponential thing we can say Tc is O(2^A)
 // Space Complexity: We are building the newSlice: O(2^A), max size of the slice is 2^A
+
+// In go, tagged switch is more clear than if-else. By default go execute only one case, no fallback to other cases. 
