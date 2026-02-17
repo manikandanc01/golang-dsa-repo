@@ -51,3 +51,5 @@ func solveCompareLinkedList(A *listNode, B *listNode) int {
 
 	return 1
 }
+
+// Tc is O(n), Sc is O(1)

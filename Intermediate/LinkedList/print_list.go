@@ -73,3 +73,5 @@ func listNode_new(val int) *listNode {
 	node.next = nil
 	return node
 }
+
+// Tc is O(n), sc is O(1)
