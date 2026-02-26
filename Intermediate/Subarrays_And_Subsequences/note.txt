@@ -1,0 +1,49 @@
+Subarrays -> Continuous sequence of elements in an array
+
+Example: [1,2,3,4]
+Possible Subarrays:
+1
+1 2
+1 2 3
+1 2 3 4 
+2
+2 3
+2 3 4
+3
+3 4
+4
+
+Total Subarrays count: n*(n+1) / 2
+
+------x----------------x-----------------x------
+Subsequence:
+
+Any sequence of elements in an array
+Order maintained
+Need not to be continuous
+
+Example:
+[1, 2, 3]
+
+[]
+1
+1 2
+1 2 3
+1 3
+2
+2 3
+3
+
+Each element in an array 2 possibilities either select or not select
+Count: 2^n => 2^3 = 8
+
+
+# Sorting is not suitable for Subarrays. Because sorting will change the order. 
+# But for subsequences it will works well for problems like [sum, product, min, max, xor]
+
+---------------x---------------------x-------------------x------------------------
+SUBSETS:
+
+Any sequence of elements order, continuity doesn't matter
+
+-----------------------x------------------x----------------------x--------------
