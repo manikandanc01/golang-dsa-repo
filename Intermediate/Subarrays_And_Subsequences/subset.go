@@ -122,7 +122,7 @@ func subsets(A []int) [][]int {
 // Time complexity is: O(n.2^n + n^2.2^n)
 
 // In this way we can't maintain the order. We should sort the final result to bring the lexicographical order. 
-
+// Space complexity: O(n.2^n)
 
 /*
 
@@ -217,4 +217,5 @@ sample code:
 	sort(res)
 
 Time complexity: O(n log n + 2^n.n + n^2.2^n) (n^2.2^n) -> for final sorting as we see in the first method. 
+Sc is O(n.2^n)
 */
