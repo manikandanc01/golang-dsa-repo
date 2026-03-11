@@ -41,6 +41,13 @@ Count: 2^n => 2^3 = 8
 # Sorting is not suitable for Subarrays. Because sorting will change the order. 
 # But for subsequences it will works well for problems like [sum, product, min, max, xor]
 
+Each element in the subsequences present in : 2^(n-1) subsequences. 
+Sum of all subsequneces = 2^(N-1) * Sum of all elements in the array. 
+
+In sorted array: 
+i-th element is smallest in 2 ^ (N-i-1) number of subsequences
+i-th element is largest in 2 ^ i number of subsequences
+
 ---------------x---------------------x-------------------x------------------------
 SUBSETS:
 
