@@ -1,0 +1,52 @@
+Important techniques - Short notes
+
+1. Prefix Sum 
+2. Carry forward technique
+3. Kadane's Algorithm (For finding maximum possible subarray sum)
+
+
+-----------------------------------------------------------------
+
+arr = [1,2,3,4,5]
+prefixSum = [1,3,6,10,15]
+
+prefixSum[0] = arr[0] 
+prefixSum[1] = arr[0] + arr[1] => prefixSum[0] + arr[1]
+prefixSum[2] = arr[0] + arr[1] + arr[2] => prefixSum[1] + arr[2]
+......so on
+
+prefixSum[i] = prefixSum[i-1] + arr[i] // for all i > 0
+
+-------------------------------------------------------------------
+
+Sum of range i....j in an array:
+
+arr = [1,2,3,4,5]
+prefixSum = [1,3,6,10,15]
+
+Sum of elements in arr from  index 1 to index 3 = arr[1]+arr[2]+arr[3] = 2+3+4 = 9
+prefixSum[0] = arr[0]
+prefixSum[1] = arr[0] + arr[1]
+prefixSum[3] = arr[0] + arr[1] + arr[2] + arr[3]
+
+sum of elements from index 1 to index 3 = (arr[0]+arr[1]+arr[2]+arr[3]) - arr[0]
+                                        = prefixSum[3] - prefixSum[0]
+
+
+Sum of elements from index i to index j = prefixSum[j] - prefixSum[i-1] // for all i > 0
+
+if i == 0, Sum of elements from i to j = prefixSum[j]
+
+----------------------------------------------------------------------------------------------
+
+Kadane's algorithm:
+  - Negative sum won't contribute to the maximum sum of the subarray
+  - So whenever the sum is less than 0, reset that to 0. 
+
+----------------------------------------------------------------------------------------------
+
+
+
+
+
+
