@@ -1,5 +1,6 @@
 Important techniques - Short notes
 
+
 1. Prefix Sum 
 2. Carry forward technique
 3. Kadane's Algorithm (For finding maximum possible subarray sum)
@@ -44,6 +45,18 @@ Kadane's algorithm:
   - So whenever the sum is less than 0, reset that to 0. 
 
 ----------------------------------------------------------------------------------------------
+
+Approach to be think about incase of subarrays and generally arrays:
+
+1. Sliding window technique
+2. Prefix Sum or Carry forward. 
+3. When it is about pairs and range sum, think about (HashMap + PrefixSum)
+4. Maximum Subarray Sum: Kadane's Algorithm
+5. Two Pointer technique
+6. When needs to find the Min sum, Max Sum in a subarray think about contribution technique as well. 
+
+-----------------------------------------------------------------------------------------------------
+
 
 
 
