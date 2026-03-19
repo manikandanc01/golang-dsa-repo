@@ -44,7 +44,35 @@ Kadane's algorithm:
   - Negative sum won't contribute to the maximum sum of the subarray
   - So whenever the sum is less than 0, reset that to 0. 
 
-----------------------------------------------------------------------------------------------
+ [1,2,3,4,5]
+
+ 1. all elements are positive: 
+       - maximum sum = sum of all elements
+
+ 2. all elements are negative:
+       - maximum sum = max element in the array 
+
+ Sometimes it is needed to find the starting and ending index of the maximum sum subarray. 
+ 
+ end index = the index where we getting maximum sum. 
+ start index = 0 or the next index of the index where we get the sum as negative and we reset that to 0. 
+
+Kadane's algo variation problem:
+
+ (FLIP in the range)
+ [1,1,1,0,0,1,1,1,1], 1<=L<=R<=N  
+
+ result => [L, R] the range of index if we flip the bits we get the maximum number of 1's. 
+ flip => change 0 to 1 and 1 to 0. 
+
+ algo:
+ - first find the total no.of one's. 
+ - 0 -> increase the total no.of 1's. 
+ - 1 -> reduce the total no. of 1's. 
+ - now here if we find the maximum subarray sum and we can find the starting and ending index. 
+   That will be the result. 
+
+--------------------------------------------------------------------------------------------------------
 
 Approach to be think about incase of subarrays and generally arrays:
 
