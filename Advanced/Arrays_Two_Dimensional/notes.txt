@@ -114,3 +114,25 @@ BR => (4,2)
  Number of submatrices in 2D array(matrices) = (n*(n+1))/2 * (m*(m+1))/2
 
  -----------------------------------------------------------------------------------------------------
+
+ Contribution Technique:
+
+ To find the number of submatrices the current element will be present. 
+ So number submarices the element present = total number of valid TL's * total number of valid BR's
+ [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+A[1][1] => for this element, total valid TL's = 4, valid BR's = 4, total submatrices = 4*4 = 16
+[
+     0   1       2
+ 0->[TL, TL,     3 ],
+ 1->[TL, [TL,BR],BR],
+ 2->[7,  BR,    BR]
+]
+
+A[i][j] =  total number of valid TL's * total number of valid BR's
+        =  [(i+1)*(j+1)]  * [(n-i)*(m-j)]
+---------------------------------------------------------------------------------------------------
