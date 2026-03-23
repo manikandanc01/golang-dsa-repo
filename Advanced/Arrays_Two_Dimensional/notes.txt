@@ -136,3 +136,12 @@ A[1][1] => for this element, total valid TL's = 4, valid BR's = 4, total submatr
 A[i][j] =  total number of valid TL's * total number of valid BR's
         =  [(i+1)*(j+1)]  * [(n-i)*(m-j)]
 ---------------------------------------------------------------------------------------------------
+
+Subarray and Submatrix:
+
+- To find the sum of the subarrays: Brute Force we need 3 loops. O(n^3)
+- To find the sum of the submatrices: Brute force we need 6 loops. We need Top Left(r1,c1), Bottom right (r2, c2)
+- and need to find the sum
+- Tc will be O(n^3 * m^3)
+
+-----------------------------------------------------------------------------------------------------------------
