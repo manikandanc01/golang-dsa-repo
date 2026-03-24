@@ -145,3 +145,28 @@ Subarray and Submatrix:
 - Tc will be O(n^3 * m^3)
 
 -----------------------------------------------------------------------------------------------------------------
+Maximum Submatrix sum variations:
+
+1. Submatrix starts from  row 0th row and ends at (n-1) th row.
+          - In this problem, in a valid submatrix all the elements in the column is included
+          - Take columnwise sum + Apply kadane's algorithm to find the maximum submatrix sum .
+          
+2. Submatrix starts from 0th row and ends at any row. 
+          - In this problem, Initialize one empty array a[m] of size m. m -> no of columns
+          - start at 0th row. endRow (0 -> n),  add all elements in the column to the array a. 
+          - for j- (0 -> m), a[j] += A[end][j]
+          - Apply kadane's algorithm. To find the current maximum. 
+          - Tc is O(N*M + M), Sc is O(M)
+
+          - Here TL is in the 0th row, but BR ends at 0 to n-1 th row anywhere. 
+
+3. Submatrix start from anywhere and ends at anywhere. 
+          - start (0-> n) (TL)
+              a[m]
+              end (start -> n) (BR)
+                 j (0 -> m)
+                    a[j] += A[end][j]
+                
+                 ans = max(ans, kadane(a[]))
+
+          - tc will be O(N^2 * M). sc will be O(m)
