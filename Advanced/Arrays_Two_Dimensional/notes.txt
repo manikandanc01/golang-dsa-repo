@@ -125,7 +125,9 @@ BR => (4,2)
     [7,8,9]
 ]
 
-A[1][1] => for this element, total valid TL's = 4, valid BR's = 4, total submatrices = 4*4 = 16
+A[1][1] => for this element, total valid TL's = 4, valid BR's = 4, total submatrices = 4*4 = 16, means the element at
+(1,1) possible to come in 16 submatrices. 
+
 [
      0   1       2
  0->[TL, TL,     3 ],
