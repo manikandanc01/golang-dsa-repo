@@ -1,0 +1,13 @@
+Various Sorting techniques for slice in golang:
+
+A := []Type 
+
+1. sort.Ints(A), sort.Float64s(A), sort.Strings(A) and so on for built in types
+2. sort.Slice(A, less)
+3. sort.SliceStable(A, less) -> when sort based on multiple condition, preserves the order of the input. 
+
+
+less function:(Comparator function, determines which index element should comes first in the sorted result)
+func(i,j int)bool{
+
+}
