@@ -63,3 +63,17 @@ Algorithm in simpler words:
    2. Find just larger element on right
    3. Swap
    4. Reverse suffix
+
+Walkthrough Example
+1 3 5 4 2
+Step 1: Find breakpoint
+3 < 5 → index = 1
+
+Step 2: Find next greater than 3
+From right → 4
+
+Step 3: Swap
+1 4 5 3 2
+
+Step 4: Reverse right side
+1 4 2 3 5
