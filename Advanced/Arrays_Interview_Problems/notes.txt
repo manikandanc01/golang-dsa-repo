@@ -77,3 +77,7 @@ Step 3: Swap
 
 Step 4: Reverse right side
 1 4 2 3 5
+
+---------------------------------------------------------------------
+
+TO find number of one's formula =  [A/i*10] * i + min(max(A%(i*10) - (i-1), 0), i)
