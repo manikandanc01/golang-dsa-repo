@@ -1,3 +1,15 @@
 a ^ 0 = a
 a ^ a = 0
 
+-----------------------------------------------------------
+
+Go Operator Precedence Table 
+Precedence 	Operators	             Category
+Highest	   +, -, !, ^, *, &, <-	    Unary Operators
+5	         *, /, %, <<, >>, &, &^	 Multiplicative & Bitwise
+4         	+, -, |, ^	             Additive
+3	         ==, !=, <, <=, >, >=	    Relational/Comparison
+2         	&&	                      Logical AND
+1(Lowest)   ||	                      Logical OR
+
+--------------------------------------------------------------------
