@@ -38,15 +38,39 @@ The value of X will be 2 and the value of Y will be 8. The XOR of 2 and 8 is 10.
 // import "math"
 func solveStrangeEquality(A int) int {
 	/*
-	   Optimal solution: After observation,
-	   First have to find the last set bit.
-	   2^(lastSetBit + 1) is the value for y, which is the smallest number greater than A.
-	   and toggle the bits in A will give the greatest number which is less than A.
-	   return x^y.
+			   Optimal solution: After observation,
+			   First have to find the last set bit.
+			   2^(lastSetBit + 1) is the value for y, which is the smallest number greater than A.
+			   and toggle the bits in A will give the greatest number which is less than A.
+			   return x^y.
 
-	   Tc will be O(1), Sc is O(1)
+			   Tc will be O(1), Sc is O(1)
 
-	   A + B = (A ^ B) + 2*(A & B)
+			   A + B = (A ^ B) + 2*(A & B), If A&B = 0, then A + B = A ^ B.
+
+			   When you add two numbers in binary:
+
+		          First, you add bits → this is XOR
+		          Then, you handle carry → this comes from AND
+		          Carry moves left → multiplying by 2
+
+				  Sum = (sum without carry) + (carry shifted left)
+
+				  A    B    A^B   A&B   Contribution
+				  0    0     0     0      0
+				  0    1     1     0      1
+				  1    0     1     0      1
+				  1    1     0     1      carry
+
+
+				  Whenever we are adding 2 binary numbers: A^B -> will gives the actual sum without carry.
+				  A & B -> Will gives the carry.
+				  2 * (A ^ B) -> Will shift the Carry towards the left.
+
+
+				  Let's say: A&B =  13 -> 1101, 13*2 = 26 -> 11010 Which is (13<<1)
+
+
 	*/
 
 	lastSetBit := 0
